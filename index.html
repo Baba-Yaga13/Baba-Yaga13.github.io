@@ -13,9 +13,9 @@
     :root {
       --primary: #00eaff;   /* Neon blue */
       --accent:  #ff2aff;    /* Neon pink */
-      --bg:      #121212;    /* Dark background */
+      --bg:      white;    /* Dark background */
       --header-bg: #1e1e1e;   /* Slightly lighter header background */
-      --text:    #ffffff;     /* White text */
+      --text:    #000080;     /* White text */
     }
     * {
       margin: 0;
@@ -97,7 +97,7 @@
       background-size: 400% 400%;
       animation: wave 20s ease infinite;
       padding: 0 1rem;
-      margin-top: 70px; /* Offset for fixed header */
+      margin-top: 10px; /* Offset for fixed header */
     }
     @keyframes wave {
       0% { background-position: 0% 50%; }
@@ -180,6 +180,36 @@
       height: 100%;
       object-fit: cover;
     }
+    /* Profile Image - Circular with Border */
+.profile-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--primary);
+  margin: 0 auto 1rem; /* Centers image and adds spacing */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* LinkedIn Icon Styling */
+.linkedin-icon {
+  width: 24px; /* Small LinkedIn icon */
+  height: 24px;
+  vertical-align: middle;
+  margin-left: 8px; /* Space between name and logo */
+  transition: transform 0.3s ease;
+}
+h1 a:hover .linkedin-icon {
+  transform: scale(1.1);
+}
+
     /* Education details container */
     .education-details {
       text-align: left;
@@ -377,14 +407,27 @@
   </header>
 
   <!-- Hero Section with Animated Background -->
-  <section id="hero">
-    <div class="hero-content container">
-      <h1><a href="https://linkedin.com/in/yashom1/" target="_blank">Yashovardhan Malhotra</a></h1>
-      <p>
-        Results-driven MS Computer Science candidate with 3+ years of software development experience—specializing in scalable distributed systems, cloud computing, and high-performance backend development.
-      </p>
-    </div>
-  </section>
+    <!-- Hero Section with Animated Background -->
+    <section id="hero">
+      <div class="hero-content container">
+        <!-- Circular Profile Image -->
+        <div class="profile-img">
+          <img src="profile.jpg" alt="Yashovardhan Malhotra">
+        </div>
+  
+        <h1>
+          <a href="https://linkedin.com/in/yashom1/" target="_blank">
+            Yashovardhan Malhotra
+            <img class="linkedin-icon" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
+          </a>
+        </h1>
+  
+        <p style="color:white">
+          Results-driven MS Computer Science candidate with 3+ years of software development experience—specializing in scalable distributed systems, cloud computing, and high-performance backend development.
+        </p>
+      </div>
+    </section>
+  
 
   <!-- About Section -->
   <section id="about" class="reveal">
@@ -411,7 +454,7 @@
       <div class="education-item">
         <!-- Container for the circular college image -->
         <div class="college-img">
-          <img src="PennState.jpg" alt="Pennsylvania State University" />
+          <img src="C:\Users\yasho\Desktop\Resumes\PennState.jpg" alt="Pennsylvania State University" />
         </div>
         <!-- Education details to the right of the image -->
         <div class="education-details">
@@ -427,7 +470,7 @@
       <div class="education-item">
         <!-- Container for the circular college image -->
         <div class="college-img">
-          <img src="srm.png" alt="SRM Institute of Science and Technology" />
+          <img src="C:\Users\yasho\Desktop\Resumes\srm.png" alt="SRM Institute of Science and Technology" />
         </div>
         <!-- Education details to the right of the image -->
         <div class="education-details">
@@ -448,7 +491,7 @@
       <h2>Professional Experience</h2>
       <div class="timeline">
         <!-- Timeline Item 1 -->
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal" style="background-color: white;">
           <h3>Senior Software Developer | Softlink Information Systems</h3>
           <ul>
             <li>Developed and optimized a custom OGMA plugin (TypeScript, Node.js), reducing rendering time by 47%.</li>
@@ -458,7 +501,7 @@
           </ul>
         </div>
         <!-- Timeline Item 2 -->
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal" style="background-color: white;">
           <h3>Team Lead | TATA Consultancy Services</h3>
           <ul>
             <li>Led full-cycle development, deployment, and maintenance of the Officer’s mobile app for the Directorate General of Foreign Trade, Government of India.</li>
@@ -469,7 +512,7 @@
           </ul>
         </div>
         <!-- Timeline Item 3 -->
-        <div class="timeline-item reveal">
+        <div class="timeline-item reveal" style="background-color: white;">
           <h3>Software Developer | TATA Consultancy Services</h3>
           <ul>
             <li>Built secure authentication APIs with Java, OAuth2, and JWT—reducing banking fraud by 80%.</li>
